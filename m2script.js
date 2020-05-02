@@ -2,9 +2,7 @@
 
 function myKeyPress(e){
 
-  /* TODO: retrieve the value from the text input */
-  var mytextbox = "my textbox element";
-
+  var mytextbox = document.getElementById("textinput");
 
   // TODO: set the value of the textbox with the formatted value
 
@@ -16,12 +14,10 @@ function myKeyPress(e){
   }
 
   var x = String.fromCharCode(keyPressed);
-  var y = formatPhoneNumber("7189515000");
-
+  var y = formatPhoneNumber(mytextbox.value);
 
   console.log("Key Pressed = " + x);
   console.log("  Formatted = " + y);
-
 
 
   // TODO: Add a condition to ignore entries beyond 10 digits
@@ -32,8 +28,8 @@ function formatPhoneNumber(value){
 
   /* TODO:  Use replace function to ignore extra - character */
 
-  if(value.length > 3 && value.length <= 6)
-    value = value.slice(0,3) + "-" + value.slice(3);
+  if(value.length > 2 && value.length <= 6)
+    value = value.slice(0,3) + "-" + value.slice(4);
   else if(value.length > 6)
     value = value.slice(0,3) + "-" + value.slice(3,6) + "-" + value.slice(6);
 
