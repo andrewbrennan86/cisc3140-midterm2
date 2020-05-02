@@ -4,8 +4,6 @@ function myKeyPress(e){
 
   var mytextbox = document.getElementById("textinput");
 
-  // TODO: set the value of the textbox with the formatted value
-
   var keyPressed;
   if(window.event) { // IE
     keyPressed = e.keyCode;
@@ -19,6 +17,7 @@ function myKeyPress(e){
   console.log("Key Pressed = " + x);
   console.log("  Formatted = " + y);
 
+  mytextbox.value = y;
 
   // TODO: Add a condition to ignore entries beyond 10 digits
 
