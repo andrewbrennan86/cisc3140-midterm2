@@ -19,7 +19,9 @@ function myKeyPress(e){
 
   mytextbox.value = y;
 
-  // TODO: Add a condition to ignore entries beyond 10 digits
+  if (y.length <= 12) {
+	mytextbox.value = y.substring(0,11);
+  }
 
 }
 
