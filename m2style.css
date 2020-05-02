@@ -1,5 +1,10 @@
-/* TODO: Style the input field so that at minimum ... */
-/* 1. The input has only the bottom border
- * 2. The font is a monospaced font
- * (all other design decisions are up to you)
- */
+
+#textinput {
+	font-family: courier;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-color: navy;
+
+}
+
