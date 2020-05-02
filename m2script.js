@@ -25,12 +25,10 @@ function myKeyPress(e){
 
 function formatPhoneNumber(value){
 
-  /* TODO:  Use replace function to ignore extra - character */
-
   if(value.length > 2 && value.length <= 6)
     value = value.slice(0,3) + "-" + value.slice(4);
-  else if(value.length > 6)
-    value = value.slice(0,3) + "-" + value.slice(3,6) + "-" + value.slice(6);
+  else if(value.length > 6 && value.length <=8)
+    value = value.slice(0,3) + "-" + value.slice(4,7) + "-" + value.slice(7);
 
   return value;
 }
